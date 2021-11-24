@@ -10,3 +10,7 @@
 # UML use case and class diagram
 
 ![image](UML/userCase1.svg)
+
+# UML Class diagram
+
+![image](UML/classDiagram.png)
