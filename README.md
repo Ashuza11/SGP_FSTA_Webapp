@@ -6,7 +6,7 @@
 # UI
 ![image](prototype/Sgp1.png)
 
-# Use case and class diagram
+# Use case diagram
 
 ![image](UML/userCaseDiagram3.png)
 
