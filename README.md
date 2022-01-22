@@ -1,16 +1,15 @@
-![png](sgp.png)
+![png](Sgp.png)
 
 # Description of the App
+<p>SGP stend for Système des gestion de payements et enregistrement des bordereaux</p>
 
-# Prototype
-![image](prototype/sgp1.png)
+# UI
+![image](prototype/Sgp1.png)
 
-![image](prototype/sgp2.png)
+# Use case and class diagram
 
-# UML use case and class diagram
+![image](UML/userCaseDiagram3.png)
 
-![image](UML/userCase1.svg)
-
-# UML Class diagram
+# Class diagram
 
 ![image](UML/classDiagram.png)
