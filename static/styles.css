@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700&display=swap');
+
+:root{
+  --blue1:#3F52AE;
+  --blue2: #A5B7E4;
+  --black1: #000;
+  --black2: #363740;
+  --red: #EB1E10;
+
+}
+
+*{
+  font-family: 'Nunito', sans-serif;
+  margin:0; padding:0;
+  box-sizing: border-box;
+  text-transform: capitalize;
+  outline: none; border:none;
+  text-decoration: none;
+  transition: all .2s linear;
+}
+
+/* *::selection{
+  background:var(--orange);
+  color:#fff;
+} */
+
+html{
+  font-size: 62.5%;
+  overflow-x: hidden;
+  scroll-padding-top: 6rem;
+  scroll-behavior: smooth;
+}
+
+
+h1, h2, h3, h4, h5, h6, a {
+  color: #ffff;
+}
+h1 {font-size: 46px;}
+
+html, body {
+  font-family: "Montserrat", sans-serif;
+  scroll-behavior: smooth;
+  color: white;
+  height: 100%;
+}
+
+.box1 {
+  left: 50%;
+  position: absolute;
+  top: 45%;
+  transform: translate(-50%, -55%);
+  text-align: center;
+}
+/* background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
+        opacity: .6; */
+
+body {
+    color: #333;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.527),rgba(0, 0, 0, 0.6)) , url(../static/img/location-tpe-courte-duree.jpg);
+    background-size: cover;
+    position: relative;
+    background-repeat: no-repeat;
+}
+  
+ 
+.site-header .nav-item .nav-link {
+  font-family: 'Roboto', 'Times New Roman', Times, serif;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 22px;
+  line-height: 35px;
+  color: #A5B7E4;
+
+}
+
+.site-header .humboger {
+  background-color: #A5B7E4;
+}
+
+
+ul .large{
+  height: 45px;
+  width: 160px;
+  padding: 8px, 30px, 8px, 30px;
+  background: #FFFFFF;
+  border: 2px solid #A5B7E4;
+  color: #A5B7E4;
+  box-sizing: border-box;
+  box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.25);
+  border-radius: 50px;
+  font-weight: bold;
+  font-size: 18px;
+}
+.home{
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-flow: column;
+  position: relative;
+  z-index: 0;
+}
+
+.home .content{
+  text-align: center;
+  width: 75%;
+}
+
+.home .content .title {
+  font-family: 'Poppins';
+  font-weight: 900;
+  font-size: 45px;
+  line-height: 125%;
+  text-align: center;
+  margin-bottom: 15px;
+}
+.home .content .text {
+  color: #fff;
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 300;
+  font-size: 20px;
+  line-height: 100%;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.home .content .b-center {
+  width: 180px;
+  height: 55px;
+  color: #FFFFFF;
+  background: #A5B7E4;
+  box-shadow: 4px 8px 4px rgba(0, 0, 0, 0.7);
+  border-radius: 50px;
+  font-family: 'Poppins';
+  font-weight: 800;
+  font-size: 22px;
+}
