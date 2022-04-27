@@ -1,6 +1,17 @@
 from flask import Flask, render_template
+from flask_sqlalchemy import SQLAlchemy
 
+# App configurations 
 app = Flask(__name__)
+
+# DB configurations 
+app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///site.db'
+## Data base instance 
+db = SQLAlchemy(app)
+
+
+# DataBase Model 
+
 
 @app.route("/")
 def home():
