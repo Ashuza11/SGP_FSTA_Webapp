@@ -10,7 +10,7 @@ def studentRegister():
     if form.validate_on_submit():
         flash(f'Account created for {form.studentName.data}!', 'success')
         return redirect(url_for('home'))
-    return render_template('studentRegister.html', title='Student Register', form=form)
+    return render_template('studentRegister.html', title='Student-Register', form=form)
 
 @app.route("/studentLogin")
 def studentLogin():

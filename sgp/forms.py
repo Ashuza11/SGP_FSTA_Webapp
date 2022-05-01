@@ -21,3 +21,5 @@ class studentLoginForm(FlaskForm):
     # Secure cookie for keeping the user stay loged in for while 
     remember = BooleanField('Remember Me')
     submit = SubmitField('Se connecter')
+
+     

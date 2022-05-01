@@ -7,10 +7,9 @@
   
 }
 *{
-    font-family: 'Nunito', sans-serif;
+    font-family: 'Poppins', sans-serif;
     margin:0; padding:0;
     box-sizing: border-box;
-    text-transform: capitalize;
     outline: none; border:none;
     text-decoration: none;
     transition: all .2s linear;
@@ -30,6 +29,87 @@ html{
     background-size: cover;
     position: relative;
     background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+  }
+ 
+  .content-section {
+    background: #ffffff;
+    padding: 10px 20px;
+    border: 1px solid #dddddd;
+    border-radius: 3px;
+    margin-bottom: 20px;
+    width: 400px;
+    height: 670px;
+    margin-top: 100px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    border: 2px solid #A5B7E4;
+    box-sizing: border-box;
+    box-shadow: 10px 10px 14px rgba(0, 0, 0, 0.9);
+    border-radius: 15px;
   }
   
+  .content-section .legend {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+  }
+  .content-section .legend  .form-title {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24.6646px;
+    line-height: 37px;
+  }
+  .content-section .legend  .form-description {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 18px;
+  }
+ 
+ 
+  .content-section  .form-control-label{
+    padding-top: 1rem;
+    padding-bottom: .1rem;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 14px;
+  }
+  .content-section .btn {
+    background-color: var(--blue2);
+    color: #ffffff;
+    box-shadow: 4px 4px 3px rgba(0, 0, 0, 0.4);
+    border-radius: 5px;
+    font-family: 'Poppins';
+    width: 350px;
+    height: 35px;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+    font-size: 14px;
+    font-weight: bold;
+  }
+  .content-section  .text-muted{
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 22px;
+    color: var(--blue2);
+  }
+  .content-section  .form-control {
+    box-sizing: border-box;
+    box-shadow: 2.05538px 2.05538px 2.05538px rgba(0, 0, 0, 0.25);
+    border-radius: 3px;
+  }
+
   
