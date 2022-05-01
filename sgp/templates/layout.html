@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     
     <!-- Logo -->
-    <link rel="shortcut icon" href="/static/img/logo1.png" type="image/x-icon"/>
+    <link rel="shortcut icon" href="{{ url_for('static', filename='/img/logo1.png') }}" type="image/x-icon"/>
     {% if title %}
         <title>SGP - {{ title }}</title>
     {% else %}
@@ -19,7 +19,7 @@
       crossorigin="anonymous"
     />
 
-    <link rel="stylesheet" href="/static/styles.css">
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
     <link rel="stylesheet" href="/static/home.css">
 </head>
 <body>
@@ -29,7 +29,7 @@
       <div class="container nav-query-fix">
 
         <a href="#" class="navbar-brand">
-          <img class="logo" src="/static/img/logo.png" alt="logo">
+          <img class="logo" src="{{ url_for('static', filename='/img/logo.png' ) }}" alt="logo">
         </a>
 
         <button
@@ -47,7 +47,7 @@
               <a href="#" class="nav-link">À propos</a>
             </li>
             <li class="nav-item">
-              <a href="#" class="nav-link">S’inscrire</a>
+              <a href="{{url_for('studentRegister')}}" class="nav-link">S’inscrire</a>
             </li>
             <li class="nav-item">
               <a href="#" class="nav-link">Contact</a>
@@ -68,7 +68,7 @@
     <div class="box-container">
         <div class="about">
             <a href="#">
-              <img class="logo" src="/static/img/footerLogo.png" alt="logo">
+              <img class="logo" src="{{ url_for('static', filename='/img/footerLogo.png') }}" alt="logo">
             </a>
             <p>Un systeme d'enrégistrement des frais et bodereaux des paiaments à l'Ulpgl-Goma Faculté des sciences et technologies appliaués.</p>
         </div>

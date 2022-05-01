@@ -1,0 +1,35 @@
+:root{
+    --blue1:#3F52AE;
+    --blue2: #A5B7E4;
+    --black1: #000;
+    --footer: #363740;
+    --red: #EB1E10;
+  
+}
+*{
+    font-family: 'Nunito', sans-serif;
+    margin:0; padding:0;
+    box-sizing: border-box;
+    text-transform: capitalize;
+    outline: none; border:none;
+    text-decoration: none;
+    transition: all .2s linear;
+}
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-padding-top: 6rem;
+    scroll-behavior: smooth;
+  }
+  body * {
+    transition: .9s;
+  }
+  body {
+    color: fff;
+    background-color: var(--footer);
+    background-size: cover;
+    position: relative;
+    background-repeat: no-repeat;
+  }
+  
+  
