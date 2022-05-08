@@ -1,10 +1,11 @@
+from crypt import methods
 from turtle import title
 from flask import  render_template, url_for, flash, redirect
 from sgp import  app
 from sgp.forms import StudentRegistrationForm, studentLoginForm
 
 
-@app.route("/studentRegister")
+@app.route("/studentRegister", methods=['GET','POST'])
 def studentRegister():
     form = StudentRegistrationForm()
     if form.validate_on_submit():
@@ -14,4 +15,5 @@ def studentRegister():
 
 @app.route("/studentLogin")
 def studentLogin():
-     return render_template('studentLogin.html')
+    form = studentLoginForm()
+    return render_template('studentLogin.html', title="Student-Login", form=form)

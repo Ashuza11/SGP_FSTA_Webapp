@@ -42,8 +42,8 @@ html{
     border-radius: 3px;
     margin-bottom: 20px;
     width: 400px;
-    height: 670px;
-    margin-top: 100px;
+    height: auto;
+    margin-top: 50px;
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -52,6 +52,8 @@ html{
     box-sizing: border-box;
     box-shadow: 10px 10px 14px rgba(0, 0, 0, 0.9);
     border-radius: 15px;
+    padding-top: 15px;
+    padding-bottom: 15px;
   }
   
   .content-section .legend {
@@ -106,10 +108,47 @@ html{
     line-height: 22px;
     color: var(--blue2);
   }
-  .content-section  .form-control {
-    box-sizing: border-box;
-    box-shadow: 2.05538px 2.05538px 2.05538px rgba(0, 0, 0, 0.25);
-    border-radius: 3px;
+  .content-section .form-control-lg{
+    width: 350px;
+    height: 35px;
+    padding: .5rem 1rem;
+    font-size: 1.25rem;
+  }
+  .content-section .invalid-feedback {
+    font-size: 1.2em;
+    color: #dc3545;
   }
 
   
+
+  /* Styles for the login form  */
+  .center-box {
+    margin-top: 200px;
+  }
+  .content-section .form-group .forget-pasword{
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 11px; 
+    margin-left: 160px;
+  }
+  .content-section .form-group .forget-pasword a{
+   text-decoration: none;
+  }
+
+  .content-section .form-check-input {
+    width: 17px;
+    height: 17px;
+    margin-top: .9em;
+    margin-bottom: .9em;
+    
+  }
+  .content-section .form-check-label {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 200;
+    font-size: 12px;
+    padding-left: .2em;
+    margin-top: .9em;
+    margin-bottom: .9em;
+  }

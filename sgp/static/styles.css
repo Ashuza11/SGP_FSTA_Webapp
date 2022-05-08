@@ -15,7 +15,7 @@
   box-sizing: border-box;
   outline: none; border:none;
   text-decoration: none;
-  transition: all .2s linear;
+  transition: all .9s linear;
 }
 
 html{
@@ -89,6 +89,7 @@ ul .large{
   font-weight: bold;
   font-size: 18px;
 }
+
 ul .large:hover{
   background-color: var(--blue2);
   color: #fff;
@@ -105,6 +106,7 @@ ul .large:hover{
   justify-content: space-between;
   padding: 20px;
   margin-top: 20px;
+  font-family: "Roboto", sans-serif;
 }
 .footer .box-container .about {
   width: 350px;
@@ -118,11 +120,10 @@ ul .large:hover{
 }
 
 .footer .box-container .about p{
-  font-family: 'Roboto';
   font-style: normal;
-  font-weight: 100;
-  font-size: 15px;
-  line-height: 30px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 25px;
   color: #FFFFFF;
   flex: none;
   order: 1;
@@ -132,25 +133,23 @@ ul .large:hover{
 }
 
 .footer .box-container  .contact {
-  width: 150px;
+  width: 200px;
   height: auto;
   margin-right: 25px;
 }
 
 .footer .box-container  .contact h3 {
-  font-family: 'Roboto';
   font-style: normal;
-  font-weight: 900;
+  font-weight: 600;
   font-size: 27px;
 }
 .footer .box-container  .contact .contact-info  a{
   display: block;
-  font-size: 1.5rem;
+  font-size: 16px;
   padding:.3rem 0;
   color:#eee;
   text-decoration: none;
   font-weight: 600;
-  font-size: 15px;
 }
 .footer .box-container  .contact .contact-info  a:hover{
   color:var(--blue1);
@@ -200,6 +199,10 @@ ul .large:hover{
     display: flex;
     justify-content: center;
     align-items: center;
+  }
+  .site-header .navbar-toggler-icon {
+    width: 2.2em;
+    height: 2.2em;
   }
 
 }

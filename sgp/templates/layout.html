@@ -54,7 +54,9 @@
             </li>
           </ul>
           <ul class="ms-auto">
-            <button type="button" class="btn large btn-outline-secondary">Connexion</button>
+            <button type="button" class="btn btns large btn-outline-secondary" onclick="window.location.href='{{ url_for('studentLogin') }}';">
+                Connexion
+            </button>
           </ul>
         </div>
       </div>
@@ -70,7 +72,11 @@
             <a href="#">
               <img class="logo" src="{{ url_for('static', filename='/img/footerLogo.png') }}" alt="logo">
             </a>
-            <p>Un systeme d'enrégistrement des frais et bodereaux des paiaments à l'Ulpgl-Goma Faculté des sciences et technologies appliaués.</p>
+            <p>
+              Un systeme d'enrégistrement des frais et bodereaux des paiaments
+              à l'Ulpgl-Goma Faculté des sciences et technologies appliaués.
+              Pour une bonne gestion de payements des frais connexe.
+            </p>
         </div>
         <div class="contact">
             <h3>Contact</h3>
@@ -78,8 +84,8 @@
               <a href="#">Tél: +2439906857</a>
               <a href="#">Email: sgp@ulpgl.net</a>
               <a href="#">ULPGL-Goma</a>
-              <a href="#">FSTA-ULPGL</a>
-              <a href="#">SGT-ULPGL</a>
+              <a href="#">Sgp-ulpgl.net</a>
+              <a href="#">sgt.ulpgl.net</a>
             </div>
         </div>
     </div>
