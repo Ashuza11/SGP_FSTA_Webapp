@@ -27,25 +27,26 @@
             <fieldset class="form-group ">
                 <legend class="legend">
                     <img id='logo_form'src="{{ url_for('static', filename='/img/logoform.png' ) }}" width="150" height="auto" alt="logo">
-                    <h1 class="form-title">Connexion</h1>
-                    <p class="form-description">Entrer matricule et mot de pass</p>
+                    <h1 class="form-title">Super Admin</h1>
+                    <p class="form-description">Entrer votre User name ou Email & Mot de pass</p>
                 </legend>
                 <div class="form-group">
-                    {{ form.matricule.label(class="form-control-label") }}
-
-                    {% if form.matricule.errors %}
-                        {{ form.matricule(class="form-control form-control-lg is-invalid") }}
+                    {{ form.userName.label(class="form-control-label") }}
+                    <span class="required">*</span>
+                    {% if form.userName.errors %}
+                        {{ form.userName(class="form-control form-control-lg is-invalid") }}
                         <div class="invalid-feedback">
-                            {% for error in form.matricule.errors %}
+                            {% for error in form.userName.errors %}
                                 <span>{{ error }}</span>
                             {% endfor %}
                         </div>
                     {% else %}
-                        {{ form.matricule(class="form-control form-control-lg") }}
+                        {{ form.userName(class="form-control form-control-lg") }}
                     {% endif %}
                 </div>
                 <div class="form-group">
                     {{ form.password.label(class="form-control-label") }}
+                    <span class="required">*</span>
                     <small class="forget-pasword">
                         <a href="#">Mot de passe oublié?</a>
                     </small>
@@ -68,11 +69,6 @@
         <div class="form-group">
             {{ form.remember(class="form-check-input") }}
             {{ form.remember.label(class="form-check-label") }}
-        </div>
-        <div class="have-account"> 
-            <small class="text-muted">
-                Besoin d'un compte?  <a class="ml-2" href="{{ url_for('studentRegister') }}">  Inscrivez-vous maintenant</a>
-            </small>
         </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>

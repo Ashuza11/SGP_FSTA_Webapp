@@ -11,9 +11,9 @@ def studentRegister():
     if form.validate_on_submit():
         flash(f'Account created for {form.studentName.data}!', 'success')
         return redirect(url_for('home'))
-    return render_template('studentRegister.html', title='Student-Register', form=form)
+    return render_template('student/studentRegister.html', title='Student-Register', form=form)
 
-@app.route("/studentLogin")
+@app.route("/studentLogin", methods=['GET', 'POST'])
 def studentLogin():
     form = studentLoginForm()
-    return render_template('studentLogin.html', title="Student-Login", form=form)
+    return render_template('student/studentLogin.html', title="Student-Login", form=form)

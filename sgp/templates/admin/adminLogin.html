@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <!-- Logo -->
+     <link rel="shortcut icon" href="{{ url_for('static', filename='/img/logo1.png') }}" type="image/x-icon"/>
+     {% if title %}
+         <title>Sgp-{{ title }}</title>
+     {% else %}
+         <title>Sgp-Ulpgl</title>
+     {% endif %}
+     <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="{{ url_for('static', filename='form.css') }}">
+    <title>Document</title>
+</head>
+<body>
+    <div class="content-section center-box">
+        <form method="POST" action="">
+            {{ form.hidden_tag() }}
+            <fieldset class="form-group ">
+                <legend class="legend">
+                    <img id='logo_form'src="{{ url_for('static', filename='/img/logoform.png' ) }}" width="150" height="auto" alt="logo">
+                    <h1 class="form-title">Admin</h1>
+                    <p class="form-description">Entrer votre user name ou Email & Mot de pass</p>
+                </legend>
+                <div class="form-group">
+                    {{ form.userName.label(class="form-control-label") }}
+                    <span class="required">*</span>
+                    {% if form.userName.errors %}
+                        {{ form.userName(class="form-control form-control-lg is-invalid") }}
+                        <div class="invalid-feedback">
+                            {% for error in form.userName.errors %}
+                                <span>{{ error }}</span>
+                            {% endfor %}
+                        </div>
+                    {% else %}
+                        {{ form.userName(class="form-control form-control-lg") }}
+                    {% endif %}
+                </div>
+                <div class="form-group">
+                    {{ form.password.label(class="form-control-label") }}
+                    <span class="required">*</span>
+                    <small class="forget-pasword">
+                        <a href="#">Mot de passe oublié?</a>
+                    </small>
+                    {% if form.password.errors %}
+                        {{ form.password(class="form-control form-control-lg is-invalid") }}
+                        <div class="invalid-feedback">
+                            {% for error in form.password.errors %}
+                                <span>{{ error }}</span>
+                            {% endfor %}
+                        </div>
+                    {% else %}
+                        {{ form.password(class="form-control form-control-lg") }}
+                    {% endif %}
+                </div>
+            </fieldset>
+            <div class="form-group">
+                {{ form.submit(class="btn btn-lg") }}
+            </div>
+        </form>
+        <div class="form-group">
+            {{ form.remember(class="form-check-input") }}
+            {{ form.remember.label(class="form-check-label") }}
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+</body>
+</html>
+
+

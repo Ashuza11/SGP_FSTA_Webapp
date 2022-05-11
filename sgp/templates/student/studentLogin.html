@@ -21,60 +21,18 @@
     <title>Document</title>
 </head>
 <body>
-    <div class="content-section">
-        <form method="POST" action="">
+    <div class="content-section center-box">
+        <form method="POST" action="" novalidate>
             {{ form.hidden_tag() }}
             <fieldset class="form-group ">
                 <legend class="legend">
                     <img id='logo_form'src="{{ url_for('static', filename='/img/logoform.png' ) }}" width="150" height="auto" alt="logo">
-                    <h1 class="form-title">Inscrivez-vous</h1>
-                    <p class="form-description">Entrer votre nom, matricule et mot de pass</p>
+                    <h1 class="form-title">Connexion</h1>
+                    <p class="form-description">Entrer votre matricule et mot de pass</p>
                 </legend>
                 <div class="form-group">
-                    {{ form.studentName.label(class="form-control-label") }}
-
-                    {% if form.studentName.errors %}
-                        {{ form.studentName(class="form-control form-control-lg is-invalid") }}
-                        <div class="invalid-feedback">
-                            {% for error in form.studentName.errors %}
-                                <span>{{ error }}</span>
-                            {% endfor %}
-                        </div>
-                    {% else %}
-                        {{ form.studentName(class="form-control form-control-lg") }}
-                    {% endif %}
-                </div>
-                <div class="form-group">
-                    {{ form.email.label(class="form-control-label") }}
-
-                    {% if form.email.errors %}
-                        {{ form.email(class="form-control form-control-lg is-invalid") }}
-                        <div class="invalid-feedback">
-                            {% for error in form.email.errors %}
-                                <span>{{ error }}</span>
-                            {% endfor %}
-                        </div>
-                    {% else %}
-                        {{ form.email(class="form-control form-control-lg") }}
-                    {% endif %}
-                </div>
-                <div class="form-group">
-                    {{ form.phone.label(class="form-control-label") }}
-
-                    {% if form.phone.errors %}
-                        {{ form.phone(class="form-control form-control-lg is-invalid") }}
-                        <div class="invalid-feedback">
-                            {% for error in form.phone.errors %}
-                                <span>{{ error }}</span>
-                            {% endfor %}
-                        </div>
-                    {% else %}
-                        {{ form.phone(class="form-control form-control-lg") }}
-                    {% endif %}
-                </div>
-                <div class="form-group">
                     {{ form.matricule.label(class="form-control-label") }}
-
+                    <span class="required">*</span>
                     {% if form.matricule.errors %}
                         {{ form.matricule(class="form-control form-control-lg is-invalid") }}
                         <div class="invalid-feedback">
@@ -88,7 +46,10 @@
                 </div>
                 <div class="form-group">
                     {{ form.password.label(class="form-control-label") }}
-
+                    <span class="required">*</span>
+                    <small class="forget-pasword">
+                        <a href="#">Mot de passe oublié?</a>
+                    </small>
                     {% if form.password.errors %}
                         {{ form.password(class="form-control form-control-lg is-invalid") }}
                         <div class="invalid-feedback">
@@ -100,28 +61,18 @@
                         {{ form.password(class="form-control form-control-lg") }}
                     {% endif %}
                 </div>
-                <div class="form-group">
-                    {{ form.confirm_password.label(class="form-control-label") }}
-
-                    {% if form.confirm_password.errors %}
-                        {{ form.confirm_password(class="form-control form-control-lg is-invalid") }}
-                        <div class="invalid-feedback">
-                            {% for error in form.confirm_password.errors %}
-                                <span>{{ error }}</span>
-                            {% endfor %}
-                        </div>
-                    {% else %}
-                        {{ form.confirm_password(class="form-control form-control-lg") }}
-                    {% endif %}
-                </div>
             </fieldset>
             <div class="form-group">
                 {{ form.submit(class="btn btn-lg") }}
             </div>
         </form>
-        <div class="have-account">
+        <div class="form-group">
+            {{ form.remember(class="form-check-input") }}
+            {{ form.remember.label(class="form-check-label") }}
+        </div>
+        <div class="have-account"> 
             <small class="text-muted">
-                Vous avez déjà un compte?  <a class="ml-2" href="{{ url_for('studentLogin') }}">Connectez-vous</a>
+                Besoin d'un compte?  <a class="ml-2" href="{{ url_for('studentRegister') }}">  Inscrivez-vous maintenant</a>
             </small>
         </div>
     </div>
