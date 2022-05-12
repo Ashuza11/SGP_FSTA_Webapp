@@ -1,14 +1,15 @@
 from flask import Flask
-
+from config import Config
+from flask_sqlalchemy import SQLAlchemy
+from flask_migrate import Migrate
 
 # App configurations 
 app = Flask(__name__)
-app.config['SECRET_KEY'] = '_0ff424c986ca38f387558a452257306522_'
+app.config.from_object(Config)
 
 # DB configurations 
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///site.db'
-## Data base instance 
-# db = SQLAlchemy(app)
+db = SQLAlchemy(app)
+migrate = Migrate(app, db)
 
 from sgp import routes
 from sgp import students_routes

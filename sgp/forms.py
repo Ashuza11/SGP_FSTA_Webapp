@@ -1,5 +1,4 @@
 from random import choices
-from secrets import choice
 from flask_wtf import FlaskForm
 from wtforms import StringField, PasswordField, SubmitField, BooleanField, SelectField
 from wtforms.validators import DataRequired, Length, Email, EqualTo, ValidationError
@@ -51,6 +50,7 @@ class sperAdminLoginForm(FlaskForm):
     # Secure cookie for keeping the user stay loged in for while 
     remember = BooleanField('Remember Me')
     submit = SubmitField('Se connecter')
+
 
 class adminLoginForm(FlaskForm):
     userName = StringField('Email ou Username',
