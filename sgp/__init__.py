@@ -11,6 +11,6 @@ app.config.from_object(Config)
 db = SQLAlchemy(app)
 migrate = Migrate(app, db)
 
-from sgp import routes
 from sgp import students_routes
+from sgp import routes, models
 

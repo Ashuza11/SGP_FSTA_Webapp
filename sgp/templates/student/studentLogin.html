@@ -28,7 +28,18 @@
                 <legend class="legend">
                     <img id='logo_form'src="{{ url_for('static', filename='/img/logoform.png' ) }}" width="150" height="auto" alt="logo">
                     <h1 class="form-title">Connexion</h1>
-                    <p class="form-description">Entrer votre matricule et mot de pass</p>
+                    <div class="col-md-12">
+                        {% with messages = get_flashed_messages(with_categories=true) %}
+                           {% if messages %}
+                              {% for category, message in messages %}
+                                <div class="alert alert-danger">
+                                    {{ message }}
+                                </div>
+                              {% endfor %}
+                           {% endif %}
+                        {% endwith %}
+                      </div>
+                    <!-- <p class="form-description">Entrer votre matricule et mot de pass</p> -->
                 </legend>
                 <div class="form-group">
                     {{ form.matricule.label(class="form-control-label") }}
